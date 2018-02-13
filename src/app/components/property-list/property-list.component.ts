@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Property } from '../../interfaces/property.interface';
 
 @Component({
   selector: 'app-property-list',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-list.component.css']
 })
 export class PropertyListComponent implements OnInit {
+
+  @Input('properties') properties:Array<Property>
 
   constructor() { }
 
