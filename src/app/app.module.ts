@@ -6,14 +6,12 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule, MatCardModule, MatButtonModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { PropertyListComponent } from './components/property-list/property-list.component';
 import { PropertyComponent } from './components/property/property.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PropertyListComponent,
     PropertyComponent
   ],
   imports: [
