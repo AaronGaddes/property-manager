@@ -11,3 +11,7 @@
   .property-header-image {
     background-size: cover;
   }
+
+  .full-width {
+      width: 100%;
+  }

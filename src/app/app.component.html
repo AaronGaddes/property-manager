@@ -3,13 +3,13 @@
 </mat-toolbar>
 <div class="two-col-layout">
   <div class="results">
-    <mat-toolbar color="primary">
+    <mat-toolbar color="accent">
       <span>Results</span>
     </mat-toolbar>
     <app-property *ngFor="let property of results" [property]="property" [action]="'ADD'" (onActionEmitter)="onSave(property)"></app-property>
   </div>
   <div class="saved">
-    <mat-toolbar color="primary">
+    <mat-toolbar color="accent">
       <span>Saved</span>
     </mat-toolbar>
     <app-property *ngFor="let property of saved; let s = index" [property]="property" [action]="'REMOVE'" (onActionEmitter)="onRemove(s)"></app-property>
