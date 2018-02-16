@@ -1,1 +1,13 @@
-<h1>{{property.id}}</h1>
+<div class="property-card">
+  <div [style.background-color]="property.agency.brandingColors.primary">
+    <!-- <div mat-card-avatar class="property-header-image" [style.background-image]="'url('+property.agency.logo+')'"></div> -->
+    <img [src]="property.agency.logo" alt="Agency logo">
+  </div>
+  <img [src]="property.mainImage" alt="Property image" class="property-main-image">
+  <mat-card-content>
+    <p>
+      {{property.price}}
+    </p>
+    <button mat-button (click)="onAction(property)">{{action}}</button>
+  </mat-card-content>
+</div>

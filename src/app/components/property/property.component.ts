@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Property } from '../../interfaces/property.interface';
 
@@ -10,11 +10,18 @@ import { Property } from '../../interfaces/property.interface';
 export class PropertyComponent implements OnInit {
 
   @Input('property') property: Property;
+  @Input('action') action: 'ADD' | 'REMOVE' = 'ADD';
+
+  @Output('onActionEmitter') onActionEmitter = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
     
+  }
+  
+  onAction() {
+    this.onActionEmitter.emit();
   }
 
 }

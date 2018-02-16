@@ -1,0 +1,13 @@
+.property-card {
+    max-width: 250px;
+    border: 1px solid #cfcfcf;
+    margin-bottom: 15px;
+  }
+
+  .property-main-image {
+      width: 100%;
+  }
+  
+  .property-header-image {
+    background-size: cover;
+  }

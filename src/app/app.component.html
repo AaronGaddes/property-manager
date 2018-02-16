@@ -1,6 +1,17 @@
-
 <mat-toolbar color="primary">
   <span>Property Manager</span>
 </mat-toolbar>
-
-<app-property-list [properties]="results"></app-property-list>
+<div class="two-col-layout">
+  <div class="results">
+    <mat-toolbar color="primary">
+      <span>Results</span>
+    </mat-toolbar>
+    <app-property *ngFor="let property of results" [property]="property" [action]="'ADD'" (onActionEmitter)="onSave(property)"></app-property>
+  </div>
+  <div class="saved">
+    <mat-toolbar color="primary">
+      <span>Saved</span>
+    </mat-toolbar>
+    <app-property *ngFor="let property of saved; let s = index" [property]="property" [action]="'REMOVE'" (onActionEmitter)="onRemove(s)"></app-property>
+  </div>
+</div>
